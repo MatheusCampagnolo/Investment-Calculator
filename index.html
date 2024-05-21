@@ -18,24 +18,29 @@
 
                 <!-- form to calculate simple interest -->
                 <form id="simple-interest-form">
+                    <!-- Input for initial value -->
                     <label for="simple-initial-value">Initial Value:</label>
                     <div class="input-group">
                         <span class="input-prefix">$</span>
                         <input type="text" id="simple-initial-value" placeholder="0,00" value="0,00" required>
                     </div>
 
+                    <!-- Input for interest rate -->
                     <label for="simple-rate">Interest rate:</label>
                     <div class="input-group">
                         <input type="text" id="simple-rate" step="0.01" placeholder="0,00" value="0,00" required>
+                        <!-- Dropdown to select the period for the interest rate -->
                         <select id="simple-rate-period">
                             <option value="monthly">% Monthly</option>
                             <option value="yearly">Yearly</option>
                         </select>
                     </div>
 
+                    <!-- Input for time -->
                     <label for="simple-time">Time:</label>
                     <div class="input-group">
                         <input type="text" id="simple-time" placeholder="0" value="0" required>
+                        <!-- Dropdown to select the period for the time -->
                         <select id="simple-time-period">
                             <option value="months">Months</option>
                             <option value="years">Years</option>
@@ -44,6 +49,7 @@
 
                     <button type="button" onclick="calculateSimpleInterest()">Calculate</button>
                 </form>
+                <!-- Results for the simple interest calculation -->
                 <div class="simple-results">
                     <h3>Result: </h3>
                     <p id="simple-invested-result"></p>
@@ -56,18 +62,21 @@
 
                 <!-- form to calculate compound interest -->
                 <form id="compound-interest-form">
+                    <!-- Input for initial value -->
                     <label for="compound-initial-value">Initial Value:</label>
                     <div class="input-group">
                         <span class="input-prefix">$</span>
                         <input type="text" id="compound-initial-value" placeholder="0,00" value="0,00" required>
                     </div>
 
+                    <!-- Input for monthly value -->
                     <label for="compound-monthly">Monthly Value:</label>
                     <div class="input-group">
                         <span class="input-prefix">$</span>
                         <input type="text" id="compound-monthly" placeholder="0,00" value="0,00" required>
                     </div>
                     
+                    <!-- Input for interest rate -->
                     <label for="compound-rate">Interest rate:</label>
                     <div class="input-group">
                         <input type="text" id="compound-rate" step="0.01" placeholder="0,00" value="0,00" required>
@@ -77,6 +86,7 @@
                         </select>
                     </div>
 
+                    <!-- Input for time -->
                     <label for="compound-time">Time:</label>
                     <div class="input-group">
                         <input type="text" id="compound-time" placeholder="0" value="0" required>
@@ -88,6 +98,7 @@
 
                     <button type="button" onclick="calculateCompoundInterest()">Calculate</button>
                 </form>
+                <!-- Results for the compound interest calculation -->
                 <div class="compound-results">
                     <h3>Result: </h3>
                     <p id="compound-invested-result"></p>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Calculator</title>
+    
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Investment Calculator</h1>
+        
+        <div class="calculators">
+            <div class="calculator">
+                <h2>Simple interest</h2>
+
+                <!-- form to calculate simple interest -->
+                <form id="simple-interest-form">
+                    <label for="simple-initial-value">Initial Value:</label>
+                    <div class="input-group">
+                        <span class="input-prefix">$</span>
+                        <input type="text" id="simple-initial-value" placeholder="0,00" value="0,00" required>
+                    </div>
+
+                    <label for="simple-rate">Interest rate:</label>
+                    <div class="input-group">
+                        <input type="text" id="simple-rate" step="0.01" placeholder="0,00" value="0,00" required>
+                        <select id="simple-rate-period">
+                            <option value="monthly">% Monthly</option>
+                            <option value="yearly">Yearly</option>
+                        </select>
+                    </div>
+
+                    <label for="simple-time">Time:</label>
+                    <div class="input-group">
+                        <input type="text" id="simple-time" placeholder="0" value="0" required>
+                        <select id="simple-time-period">
+                            <option value="months">Months</option>
+                            <option value="years">Years</option>
+                        </select>
+                    </div>
+
+                    <button type="button" onclick="calculateSimpleInterest()">Calculate</button>
+                </form>
+                <div class="simple-results">
+                    <h3>Result: </h3>
+                    <p id="simple-invested-result"></p>
+                    <p id="simple-interest-result"></p>
+                </div>
+            </div>
+
+            <div class="calculator">
+                <h2>Compound Interest</h2>
+
+                <!-- form to calculate compound interest -->
+                <form id="compound-interest-form">
+                    <label for="compound-initial-value">Initial Value:</label>
+                    <div class="input-group">
+                        <span class="input-prefix">$</span>
+                        <input type="text" id="compound-initial-value" placeholder="0,00" value="0,00" required>
+                    </div>
+
+                    <label for="compound-monthly">Monthly Value:</label>
+                    <div class="input-group">
+                        <span class="input-prefix">$</span>
+                        <input type="text" id="compound-monthly" placeholder="0,00" value="0,00" required>
+                    </div>
+                    
+                    <label for="compound-rate">Interest rate:</label>
+                    <div class="input-group">
+                        <input type="text" id="compound-rate" step="0.01" placeholder="0,00" value="0,00" required>
+                        <select id="compound-rate-period">
+                            <option value="monthly">% Monthly</option>
+                            <option value="yearly">Yearly</option>
+                        </select>
+                    </div>
+
+                    <label for="compound-time">Time:</label>
+                    <div class="input-group">
+                        <input type="text" id="compound-time" placeholder="0" value="0" required>
+                        <select id="compound-time-period">
+                            <option value="months">Months</option>
+                            <option value="years">Years</option>
+                        </select>
+                    </div>
+
+                    <button type="button" onclick="calculateCompoundInterest()">Calculate</button>
+                </form>
+                <div class="compound-results">
+                    <h3>Result: </h3>
+                    <p id="compound-invested-result"></p>
+                    <p id="compound-interest-result"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="scripts/script.js"></script>
+</body>
+</html>
